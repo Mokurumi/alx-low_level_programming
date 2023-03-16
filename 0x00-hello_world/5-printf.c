@@ -1,7 +1,5 @@
 #include <stdio.h>
 
-/* learning c with puts */
-
 int main(void)
 {
 
