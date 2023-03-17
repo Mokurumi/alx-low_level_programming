@@ -11,13 +11,13 @@ for (i = '0'; i <= '9'; i++)
 {
 putchar(i);
 
-if (i != 9)
+if (i != '9')
 {
 putchar(", ");
 }
 }
 
-putchar("$\n");
+putchar("\n");
 
 /* your code goes there */
 return (0);
