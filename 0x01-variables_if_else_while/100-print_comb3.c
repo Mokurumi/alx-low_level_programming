@@ -23,7 +23,7 @@ if (i != j)
 putchar(i);
 putchar(j);
 
-if (j == '9')
+if (j == '8')
 continue;
 
 putchar(',');
