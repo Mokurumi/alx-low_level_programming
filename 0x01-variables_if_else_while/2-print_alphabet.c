@@ -10,15 +10,16 @@
  */
 int main(void)
 {
-char charr;
 
-for (charr = 'a'; charr <= 'z'; charr++)
+char i;
+
+for (i = 'a'; i <= 'z'; i++)
 {
-putchar(charr);
+putchar(i);
 }
 
 putchar('\n');
 
 /* your code goes there */
 return (0);
-} 
+}
