@@ -22,6 +22,10 @@ if (i != j)
 {
 putchar(i);
 putchar(j);
+
+if (j == '9')
+continue;
+
 putchar(',');
 putchar(' ');
 }
