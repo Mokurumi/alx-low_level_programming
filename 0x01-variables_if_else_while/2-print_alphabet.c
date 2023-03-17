@@ -10,11 +10,6 @@
  */
 int main(void)
 {
-int n;
-
-srand(time(0));
-n = rand() - RAND_MAX / 2;
-
 char charr;
 
 for (charr = 'a'; charr <= 'z'; charr++)
@@ -25,4 +20,4 @@ putchar('\n');
 
 /* your code goes there */
 return (0);
-}
+} 
