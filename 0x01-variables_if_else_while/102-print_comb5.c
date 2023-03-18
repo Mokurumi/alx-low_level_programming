@@ -14,22 +14,28 @@ int main(void)
 int i;
 int j;
 int k;
+int m;
 
 for (i = '0'; i <= '9'; i++)
 {
 for (j = '0'; j <= '9'; j++)
 {
-for (k = j + 1; k <= '9'; k++)
+for (k = i; k <= '9'; k++)
+{
+for (m = j; m <= '9'; m++)
 {
 putchar(i);
 putchar(j);
 putchar(' ');
-putchar(i);
 putchar(k);
-if (i == '9' && k == '9')
+putchar(m);
+
+if (j == '8' && m == '9')
 continue;
+
 putchar(',');
 putchar(' ');
+}
 }
 }
 }
