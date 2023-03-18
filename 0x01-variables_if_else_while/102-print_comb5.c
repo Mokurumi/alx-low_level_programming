@@ -24,7 +24,7 @@ continue;
 
 putchar(i);
 putchar(' ');
-putchar();
+putchar(j);
 
 
 if (i == '98' && j == '99')
