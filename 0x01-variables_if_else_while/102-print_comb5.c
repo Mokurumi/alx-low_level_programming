@@ -22,8 +22,11 @@ for (j = '0'; j <= '9'; j++)
 {
 for (k = i; k <= '9'; k++)
 {
-for (m = j + 1; m <= '9'; m++)
+for (m = 0; m <= '9'; m++)
 {
+if (m == '0 && k == 0)
+continue;
+
 putchar(i);
 putchar(j);
 putchar(' ');
