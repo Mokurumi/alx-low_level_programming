@@ -13,33 +13,25 @@ int main(void)
 
 int i;
 int j;
-int k;
-int m;
 
-for (i = '0'; i <= '9'; i++)
+for (i = '0'; i <= '98'; i++)
 {
-for (j = '0'; j <= '9'; j++)
+for (j = i + 1; j <= '99'; j++)
 {
-for (k = i; k <= '9'; k++)
-{
-for (m = 0; m <= '9'; m++)
-{
+
 if (m == '0' && k == '0')
 continue;
 
 putchar(i);
-putchar(j);
 putchar(' ');
-putchar(k);
-putchar(m);
+putchar();
 
-if (j == '8' && m == '9')
+
+if (i == '98' && j == '99')
 continue;
 
 putchar(',');
 putchar(' ');
-}
-}
 }
 }
 
