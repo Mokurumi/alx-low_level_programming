@@ -2,12 +2,11 @@
 /* more headers goes there */
 
 /**
- * main - Entry point
- *
- * Return: Always 0 (Success)
+ * print_alphabet - Entry point
  */
 
-void print_alphabet(void){
+void print_alphabet(void)
+{
 
 char i;
 
