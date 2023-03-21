@@ -29,6 +29,7 @@ _putchar('0' + (p % 10));
 }
 
 if (j != 9)
+{
 _putchar(',');
 
 if (p < 10)
@@ -36,6 +37,7 @@ _putchar(' ');
 
 _putchar(' ');
 
+}
 }
 
 _putchar('\n');
