@@ -20,14 +20,14 @@ _putchar('0');
 }
 
 _putchar(':');
-_putchar(h + '');
+_putchar(h + ' ');
 
 if (m < 10)
 {
 _putchar('0');
 }
 
-_putchar(m + '');
+_putchar(m + ' ');
 _putchar('\n');
 }
 }
