@@ -18,6 +18,17 @@ for (j = 0; j < 10; j++)
 
 p = i * j;
 
+if (j != 0)
+{
+_putchar(',');
+
+if (p < 10)
+_putchar(' ');
+
+_putchar(' ');
+
+}
+
 if (p < 10)
 {
 _putchar('0' + p);
@@ -28,16 +39,6 @@ _putchar('0' + (p / 10));
 _putchar('0' + (p % 10));
 }
 
-if (j != 9)
-{
-_putchar(',');
-
-if (p < 9)
-_putchar(' ');
-
-_putchar(' ');
-
-}
 }
 
 _putchar('\n');
