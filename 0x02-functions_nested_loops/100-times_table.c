@@ -38,7 +38,7 @@ _putchar('0' + (p % 10));
 else
 {
 _putchar('0' + (p / 100));
-_putchar('0' + (p / 10));
+_putchar('0' + (p % 100) / 10);
 _putchar('0' + (p % 10));
 }
 }
