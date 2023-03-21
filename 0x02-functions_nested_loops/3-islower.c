@@ -5,6 +5,8 @@
  * _islower - Entry point
  *
  * @c: param
+ *
+ * Return: Always 0
  */
 
 int _islower(int c)
