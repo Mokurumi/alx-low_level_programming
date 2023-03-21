@@ -12,9 +12,9 @@ int i;
 int j;
 int p;
 if (n > -1 && n < 16)
-for (i = 0; i < n; i++)
+for (i = 0; i <= n; i++)
 {
-for (j = 0; j < n; j++)
+for (j = 0; j <= n; j++)
 {
 p = i * j;
 if (j != 0)
@@ -34,8 +34,8 @@ _putchar('0' + p);
 }
 else
 {
-_putchar(p / 10);
-_putchar(p % 10);
+_putchar('0' + (p / 10));
+_putchar('0' + (p % 10));
 }
 }
 _putchar('\n');
