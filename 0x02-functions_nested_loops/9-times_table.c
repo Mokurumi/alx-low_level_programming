@@ -24,14 +24,14 @@ _putchar('0' + p);
 }
 else
 {
-_putchar('0' + (p % 10));
 _putchar('0' + (p / 10));
+_putchar('0' + (p % 10));
 }
 
 if (j != 9)
 _putchar(',');
 
-if (j < 10)
+if (p < 10)
 _putchar(' ');
 
 _putchar(' ');
