@@ -2,7 +2,7 @@
 /* more headers goes there */
 
 /**
- * _abs.c - Entry point
+ * _abs - Entry point
  *
  * @n: param
  *
