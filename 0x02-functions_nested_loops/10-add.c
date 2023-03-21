@@ -3,10 +3,10 @@
 /**
  * add - Prints putchar
  *
- * @a : first int
- * @b : second int
+ * @a: first int
+ * @b: second int
  *
- * Return : always 0
+ * Return: always 0
  */
 
 int add(int a, int b)
