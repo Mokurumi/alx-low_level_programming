@@ -4,7 +4,7 @@
 /**
  * print_sign - Entry point
  *
- * @c: param
+ * @n: param
  *
  * Return: Always 0
  */
