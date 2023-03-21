@@ -20,7 +20,7 @@ _putchar(0);
 }
 
 _putchar(':');
-_puchar(h);
+_putchar(h);
 
 if (m < 10)
 {
