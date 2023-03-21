@@ -14,6 +14,7 @@ int p;
 
 if (n >= 0 && n <= 15)
 for (i = 0; i <= n; i++)
+{
 for (j = 0; j <= n; j++)
 {
 p = i * j;
@@ -42,4 +43,5 @@ _putchar('0' + (p % 10));
 }
 }
 _putchar('\n');
+}
 }
