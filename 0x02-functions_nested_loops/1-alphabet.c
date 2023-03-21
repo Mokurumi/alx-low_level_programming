@@ -19,12 +19,3 @@ _putchar(i);
 _putchar('\n');
 
 }
-
-int main(void)
-{
-
-print_alphabet_x10();
-
-/* your code goes there */
-return (0);
-}
