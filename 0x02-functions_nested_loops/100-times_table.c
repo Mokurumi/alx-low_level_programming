@@ -30,6 +30,9 @@ _putchar(',');
 if (p < 10)
 _putchar(' ');
 
+if (p < 100 && p > 9)
+_putchar(' ');
+
 _putchar(' ');
 
 }
