@@ -8,19 +8,16 @@
 
 void print_times_table(int n)
 {
-
 int i;
 int j;
 int p;
 
 while (n > -1 && n < 16)
 {
-
 for (i = 0; i < n; i++)
 {
 for (j = 0; j < n; j++)
 {
-
 p = i * j;
 
 if (j != 0)
@@ -30,7 +27,7 @@ _putchar(',');
 if (p < 10)
 _putchar(' ');
 
-if (p < 100 && p > 9)
+if (p < 100)
 _putchar(' ');
 
 _putchar(' ');
