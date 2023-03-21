@@ -30,7 +30,7 @@ _putchar(' ');
 }
 if (p < 10)
 _putchar('0' + p);
-else if (p < 100)
+else if (p > 10 && p < 100)
 {
 _putchar('0' + (p / 100));
 _putchar('0' + (p / 10));
