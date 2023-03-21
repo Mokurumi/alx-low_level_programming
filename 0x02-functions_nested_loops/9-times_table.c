@@ -28,7 +28,7 @@ _putchar('0' + (p / 10));
 _putchar('0' + (p % 10));
 }
 
-if (j != 9)
+if (p != 9)
 {
 _putchar(',');
 
