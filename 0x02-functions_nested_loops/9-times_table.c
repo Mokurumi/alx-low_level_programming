@@ -20,12 +20,12 @@ p = i * j;
 
 if (p < 10)
 {
-_putchar(p);
+_putchar('0' + p);
 }
 else
 {
-_putchar(p % 10);
-_putchar(p / 10);
+_putchar('0' + (p % 10));
+_putchar('0' + (p / 10));
 }
 
 if (j != 9)
