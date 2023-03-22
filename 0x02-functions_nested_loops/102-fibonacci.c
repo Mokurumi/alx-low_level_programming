@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 /**
  * main - main function
  *  
@@ -13,7 +15,7 @@ int second = 2;
 int next;
 int i;
 
-printf("%d, %d, ", first, second); // print first two numbers
+printf("%d, %d, ", first, second);
 
 for (i = 2; i < n; i++)
 {
