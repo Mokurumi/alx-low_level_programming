@@ -1,30 +1,24 @@
 #include <stdio.h>
 
 /**
- * main - Prints putchar
+ * main - main function
  *
  * Return: always 0
- *
  */
 int main(void)
 {
-
-int a = 1, b = 2, next, i;
-
-printf("%d, %d", a, b);
-
-for (i = 2; i < 98; i++)
+long first = 1;
+long second = 2;
+long next;
+long i;
+printf("%ld, %ld", first, second);
+for (i = 3; i <= 98; i++)
 {
-next = a + b;
-if (next < 0) {
-break;
+next = first + second;
+printf(", %ld", next);
+first = second;
+second = next;
 }
-printf(", %d", next);
-a = b;
-b = next;
-}
-
 printf("\n");
-
 return (0);
 }
