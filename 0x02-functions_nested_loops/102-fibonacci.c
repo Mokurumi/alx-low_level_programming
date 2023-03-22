@@ -9,14 +9,14 @@
 int main(void)
 {
 
-long long first = 1, second = 2, next, i;
+long first = 1, second = 2, next, i;
 
-printf("%lld, %lld", first, second);
+printf("%ld, %ld", first, second);
 
 for (i = 3; i <= 50; i++)
 {
 next = first + second;
-printf(", %lld", next);
+printf(", %ld", next);
 first = second;
 second = next;
 }
