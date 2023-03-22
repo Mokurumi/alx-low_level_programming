@@ -8,15 +8,16 @@
 int main(void)
 {
 
-long a = 1, b = 2, c, i;
-printf("%ld, %ld, ", a, b);
+unsigned int i;
+unsigned long int j = 1, k = 2, temp;
 
-for(i = 3; i <= 98; i++) {
-c = a + b;
-printf("%ld", c);
-if(i < 98) printf(", ");
-a = b;
-b = c;
+printf("%lu, %lu", j, k);
+for (i = 3; i <= 98; i++)
+{
+printf(", %lu", j + k);
+temp = j;
+j = k;
+k += temp;
 }
 
 printf("\n");
