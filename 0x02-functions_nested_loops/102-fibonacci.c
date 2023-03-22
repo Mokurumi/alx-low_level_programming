@@ -9,7 +9,10 @@
 int main(void)
 {
 
-long first = 1, second = 2, next, i;
+long first = 1;
+long second = 2;
+long next;
+long i;
 
 printf("%ld, %ld", first, second);
 
