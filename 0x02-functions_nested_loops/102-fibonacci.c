@@ -8,31 +8,25 @@
 
 int main(void)
 {
-      
+
 int n = 50;
 int first = 1;
 int second = 2;
-int next;
+int next; 
 int i;
 
-printf("%d, %d, ", first, second);
+printf("%d", first);
 
-for (i = 2; i < n; i++)
+for (i = 1; i < n; i++)
 {
+printf(", %d", second);
 next = first + second;
-printf("%d", next);
-
-if (i != n - 1)
-{
-printf(", ");
-}
-
 first = second;
 second = next;
 }
 
 printf("\n");
 
-return 0;
+return (0);
 
 }
