@@ -7,19 +7,19 @@
  */
 int main(void)
 {
-int first = 1, second = 2, next, i;
 
-printf("%d, %d", first, second);
+int a = 1, b = 2, c, i;
 
-for (i = 3; i <= 98; i++) {
-next = first + second;
-printf(", %d", next);
-first = second;
-second = next;
+printf("%d, %d", a, b);
+
+for (i = 2; i < 98; i++) {
+c = a + b;
+printf(", %d", c);
+a = b;
+b = c;
 }
 
 printf("\n");
 
-printf("\n");
 return (0);
 }
