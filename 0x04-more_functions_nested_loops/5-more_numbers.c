@@ -2,10 +2,10 @@
 /* more headers goes there */
 
 /**
- * print_alphabet_x10 - Entry point
+ * more_numbers - Entry point
  */
 
-void print_alphabet_x10(void)
+void more_numbers(void)
 {
 
 	char i;
