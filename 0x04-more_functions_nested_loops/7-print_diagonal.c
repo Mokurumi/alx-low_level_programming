@@ -1,8 +1,8 @@
 #include "main.h"
 /**
  * print_diagonal - my main func
- * 
- * @n: input 
+ *
+ * @n: input
  *
  */
 void print_diagonal(int n)
@@ -17,7 +17,7 @@ void print_diagonal(int n)
 	{
 		for (i = 1; i <= n; i++)
 		{
-			for (j = 1; j <= i; j++)
+			for (j = 2; j <= i; j++)
 			{
 				_putchar(' ');
 			}

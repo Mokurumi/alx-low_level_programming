@@ -1,8 +1,8 @@
 #include "main.h"
 /**
  * print_line - my main func
- * 
- * @n: input 
+ *
+ * @n: input
  *
  */
 void print_line(int n)

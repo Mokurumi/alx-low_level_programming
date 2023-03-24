@@ -4,36 +4,26 @@
 /**
  * main - check the code
  *
- * Return: Always 0.
+ * Return: Always 0
  */
 int main(void)
 {
 	long n = 612852475143;
-    	long large_fact = 1;
+    	long factor = 2;
 
-	while (n % 2 == 0)
-    	{
-		large_fact = 2;
-		n /= 2;
-    	}
-
-    	long sqrt_n = sqrt(n);
-
-    	for (long i = 3; i <= sqrt_n; i += 2)
-    	{
-		while (n % i == 0)
+	while (n > 1)
+	{
+		if (n % factor == 0)
 		{
-	    		large_fact = i;
-	    		n /= i;
+	    		n /= factor;
+		}
+	       	else
+	       	{
+	    		factor++;
 		}
     	}
 
-    	if (n > 2)
-    	{
-		large_fact = n;
-    	}
-
-    	printf("%ld\n", large_fact);
+    	printf("%ld\n", factor);
 
     	return (0);
 }
