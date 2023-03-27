@@ -12,7 +12,7 @@
 int main(void)
 {
 	char password[PASSWORD_LENGTH + 1];
-	const char charset[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+-={}[]\|;:',./<>?~`";
+	const char charset[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+-={}[];:',./<>?~` ";
 	const size_t charset_size = sizeof(charset) - 1;
 	int i;
 
