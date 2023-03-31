@@ -3,9 +3,8 @@
 /**
  * _strcmp - check the code
  *
- * @dest: input
- * @src: input
- * @n: input
+ * @s1: input
+ * @s2: input
  *
  * Return: char output
  */
