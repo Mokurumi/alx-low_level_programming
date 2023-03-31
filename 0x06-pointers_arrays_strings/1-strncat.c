@@ -1,19 +1,20 @@
 #include "main.h"
 
 /**
- * _strcat - check the code
+ * _strncat - check the code
  *
  * @dest: input
  * @src: input
+ * @n: input
  *
  * Return: char output
  */
-char *_strcat(char *dest, char *src)
+char *_strncat(char *dest, char *src, int n)
 {
 	int i = _strlen(dest);
 	int j = 0;
 
-	while (src[j] != '\0')
+	while (src[j] != '\0' && j < n)
 	{
 		dest[i] = src[j];
 		i++;
