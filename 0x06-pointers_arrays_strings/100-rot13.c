@@ -17,13 +17,13 @@ char *rot13(char *n)
 	{
 		for (j = 0; j < 52; j++)
 		{
-			if (s[i] == data1[j])
+			if (n[i] == albet[j])
 			{
-				s[i] = datarot[j];
+				n[i] = betal[j];
 				break;
 			}
 		}
 	}
 
-	return (s);
+	return (n);
 }
