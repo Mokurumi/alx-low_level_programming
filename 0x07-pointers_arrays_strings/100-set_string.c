@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_diagsums - check the code
+ * set_string - check the code
  *
  * @s: input
  * @to: input
