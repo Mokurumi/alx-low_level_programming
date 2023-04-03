@@ -12,13 +12,7 @@ void print_diagsums(int *a, int size)
 
 	for (i = 0; i < size; i++)
 	{
-		/**
-		 * add diagonal element
-		 */
 		sum1 += *(a + i*size + i);
-		/**
-		 * add anti-diagonal element
-		 */
 		sum2 += *(a + i*size + size - 1 - i);
 	}
 
