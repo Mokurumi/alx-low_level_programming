@@ -8,23 +8,22 @@
  */
 void print_number(int n)
 {
-	int divisor = 1;
+	unsigned int a = 0;
 
 	if (n < 0)
 	{
 		_putchar('-');
-		n = -n;
-    	}
-
-	while (n / divisor >= 10)
-       	{
-		divisor *= 10;
-    	}
-
-    	while (divisor > 0)
+		a = -n;
+	}
+	else
 	{
-		_putchar((n / divisor) + '0');
-		n %= divisor;
-		divisor /= 10;
-    	}
+		a = n;
+	}
+
+	if (a / 10 != 0)
+	{
+		print_number(a / 10);
+	}
+
+	_putchar('0' + a % 10);
 }
