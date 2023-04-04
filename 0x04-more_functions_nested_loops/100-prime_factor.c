@@ -9,21 +9,20 @@
 int main(void)
 {
 	long n = 612852475143;
-    	long factor = 2;
+	long factor = 2;
 
 	while (n > 1)
 	{
 		if (n % factor == 0)
 		{
-	    		n /= factor;
+			n /= factor;
 		}
-	       	else
-	       	{
-	    		factor++;
+		else
+		{
+			factor++;
 		}
-    	}
+	}
 
-    	printf("%ld\n", factor);
-
-    	return (0);
+	printf("%ld\n", factor);
+	return (0);
 }
