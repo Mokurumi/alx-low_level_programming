@@ -3,7 +3,7 @@
 /**
  * is_palindrome - check the code
  *
- * @n: input
+ * @s: input
  *
  * Return: int
  */
