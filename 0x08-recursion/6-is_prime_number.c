@@ -25,19 +25,10 @@ int is_prime_number(int n)
  */
 int prime_helper(int n, int i)
 {
-	/* if i is greater than the square root of n, n is prime */
 	if (i * i > n)
-	{
 		return (1);
-	}
-	/* if n is divisible by i, n is not prime */
 	else if (n % i == 0)
-	{
 		return (0);
-	}
-	/* do recursion */
 	else
-	{
 		return (prime_helper(n, i + 1));
-	}
 }
