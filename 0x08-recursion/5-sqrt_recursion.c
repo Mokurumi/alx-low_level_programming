@@ -9,12 +9,10 @@
  */
 int _sqrt_recursion(int n)
 {
-	if (n < 0)
-		return (-1);
-	else if (n == 0)
+	if (n == 0)
 		return (0);
-
-	return (_sqrt_helper(n, 1, n));
+	else
+		return (_sqrt_helper(n, 1));
 }
 
 /**
@@ -22,31 +20,18 @@ int _sqrt_recursion(int n)
  *
  * @n: input
  * @start: input
- * @end: input
  *
  * Return: the square root of n or -1 if n does not have a natural square root.
  */
-int _sqrt_helper(int n, int start, int end)
+int _sqrt_helper(int n, int start)
 {
-	int mid;
-
-	/* check for perfect square */
-	if (start == end && start * start == n)
-		return (start);
-
-	/* exhausted search range */
-	if (start > end)
+	/* exhausted search */
+	if (start * start > n)
 		return (-1);
-
-	mid = start + (end - start) / 2;
-
-	/* mid point is the square root */
-	if (mid * mid == n)
-		return (mid);
-	/* if mid is too high, search starting half */
-	else if (mid * mid > n)
-		return (_sqrt_helper(n, start, mid - 1));
-	/* else search last half */
+	/* square root found */
+	else if (start * start == n)
+		return (start);
+	/* increase the number and check again  */
 	else
-		return (_sqrt_helper(n, mid + 1, end));
+		return (_sqrt_helper(n, start + 1));
 }
