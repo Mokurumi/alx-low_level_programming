@@ -20,7 +20,7 @@ int is_palindrome(char *s)
 /**
  * pali_helper - check the code
  *
- * @n: input
+ * @s: input
  * @start: input
  * @end: input
  *
@@ -33,5 +33,5 @@ int pali_helper(char *s, int start, int end)
 	else if (s[start] != s[end])
 		return (0);
 	else
-		return (pali_helper(s, start+1, end - 1));
+		return (pali_helper(s, start + 1, end - 1));
 }
