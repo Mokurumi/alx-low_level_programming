@@ -12,9 +12,9 @@ int is_palindrome(char *s)
 	int len = strlen(s);
 
 	if (len <= 1)
-		return 1;
+		return (1);
 	else
-		return pali_helper(s, 0, len - 1);
+		return (pali_helper(s, 0, len - 1));
 }
 
 /**
