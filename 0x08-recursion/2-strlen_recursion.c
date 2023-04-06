@@ -4,6 +4,8 @@
  * _strlen_recursion - check the code
  *
  * @s: input
+ *
+ * Return: int
  */
 int _strlen_recursion(char *s)
 {
