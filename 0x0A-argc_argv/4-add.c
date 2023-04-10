@@ -12,7 +12,7 @@
  */
 int main(int argc, char *argv[])
 {
-	int i = 0, sum = 0, num;
+	int i = 1, sum = 0, num, j;
 
 	if (argc == 1)
 	{
@@ -23,26 +23,26 @@ int main(int argc, char *argv[])
 	while(i < argc)
 	{
 		/* Check if the argument contains only digits */
-		for (int j = 0; argv[i][j] != '\0'; j++)
+		for (j = 0; argv[i][j] != '\0'; j++)
 		{
 			if (!isdigit(argv[i][j]))
 			{
 				printf("Error\n");
-				return 1;
+				return (1);
 			}
 		}
 
 		num = atoi(argv[i]);
 
-		// Check if the number is positive
+		/* Check if the number is positive */
 		if (num < 0)
 		{
 			printf("Error\n");
-		       	return 1;
+			return (1);
 		}
 
 		sum += num;
-		i++
+		i++;
 	}
 
 	printf("%d\n", sum);
