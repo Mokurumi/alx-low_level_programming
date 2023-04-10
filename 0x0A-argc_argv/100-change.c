@@ -1,30 +1,21 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include<stdio.h>
+#include<stdlib.h>
 
 /**
- * main - check the code
+ * count_coins - count the minimum number of coins needed to make change
  *
- * @argc: args length
- * @argv: args array
+ * @cents: the amount of cents to make change for
  *
- * Return: output
+ * Return: the minimum number of coins
  */
-int main(int argc, char *argv[])
+int count_coins(int cents)
 {
-	int cents, coins = 0;
-
-	if (argc != 2)
-	{
-		printf("Error\n");
-		return 1;
-	}
-
-	cents = atoi(argv[1]);
+	int coins = 0;
 
 	if (cents < 0)
 	{
 		printf("0\n");
-		return 0;
+		return (0);
 	}
 
 	while (cents >= 25)
@@ -57,6 +48,36 @@ int main(int argc, char *argv[])
 		cents -= 1;
 	}
 
-	printf("%d\n", coins);
+	return (coins);
+}
+
+/**
+ * main - check the code
+ *
+ * @argc: args length
+ * @argv: args array
+ *
+ * Return: 0 on success, 1 on error
+ *
+ */
+int main(int argc, char *argv[])
+{
+	int cents;
+
+	if (argc != 2)
+	{
+		printf("Error\n");
+		return (1);
+	}
+
+	cents = atoi(argv[1]);
+
+	if (cents < 0)
+	{
+		printf("0\n");
+		return (0);
+	}
+
+	printf("%d\n", count_coins(cents));
 	return (0);
 }

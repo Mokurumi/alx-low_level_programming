@@ -1,6 +1,6 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <ctype.h>
+#include<stdio.h>
+#include<stdlib.h>
+#include<ctype.h>
 
 /**
  * main - check the code
@@ -8,7 +8,8 @@
  * @argc: args length
  * @argv: args array
  *
- * Return: output
+ * Return: 0 on success, 1 on error
+ *
  */
 int main(int argc, char *argv[])
 {
@@ -20,7 +21,7 @@ int main(int argc, char *argv[])
 		return (0);
 	}
 
-	while(i < argc)
+	while (i < argc)
 	{
 		/* Check if the argument contains only digits */
 		for (j = 0; argv[i][j] != '\0'; j++)
