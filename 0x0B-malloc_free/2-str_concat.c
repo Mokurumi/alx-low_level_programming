@@ -22,14 +22,14 @@ char *str_concat(char *s1, char *s2)
 	len1 = strlen(s1);
 	len2 = strlen(s2);
 
-	concat = (char *)malloc((len1 + len2 + 1) * sizeof(char));
+	ans = (char *)malloc((len1 + len2 + 1) * sizeof(char));
 
-	if (concat == NULL)
+	if (ans == NULL)
 	{
 		return (NULL);
 	}
 
-	strcpy(concat, s1);
-	strcat(concat, s2);
-	return (concat);
+	strcpy(ans, s1);
+	strcat(ans, s2);
+	return (ans);
 }
