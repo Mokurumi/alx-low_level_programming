@@ -10,15 +10,30 @@
  */
 int count_words(char *str)
 {
-	int count = 0, i;
+	int num_words = 0;
+	int i;
 
-	for (i = 0; str[i]; i++)
+	if (str == NULL || str[0] == '\0')
+		return (0);
+
+	/* Skip over leading spaces */
+	for (i = 0; str[i] == ' '; i++)
+		;
+
+	while (str[i] != '\0')
 	{
-		if (str[i] != ' ' && (str[i + 1] == ' ' || str[i + 1] == '\0'))
-			count++;
+		/* Count each word */
+		while (str[i] != ' ' && str[i] != '\0')
+			i++;
+
+		num_words++;
+
+		/* Skip over spaces between words */
+		while (str[i] == ' ')
+			i++;
 	}
 
-	return (count);
+	return (num_words);
 }
 
 /**
