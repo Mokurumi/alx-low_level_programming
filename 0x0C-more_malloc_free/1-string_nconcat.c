@@ -2,7 +2,7 @@
 #include <string.h>
 
 /**
- * main - check the code
+ * string_nconcat - check the code
  *
  * @s1: original string
  * @s2: string to concatenate
@@ -30,10 +30,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	concat = malloc(len1 + n + 1);
 
 	if (concat == NULL)
-		return NULL;
+		return (NULL);
 
 	memcpy(concat, s1, len1);
 	memcpy(concat + len1, s2, n);
 	concat[len1 + n] = '\0';
-	return concat;
+	return (concat);
 }
