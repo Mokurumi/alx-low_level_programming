@@ -10,12 +10,13 @@ void print_all(const char * const format, ...)
 {
 	va_list args;
 	char *s;
-	int i = 0, printed;
+	int printed;
+	int i = 0;
 	int separator = 0;
 
 	va_start(args, format);
 	/* Loop through format string and print corresponding argument */
-	while (format[i] != '\0')
+	while (format != NULL && format[i] != '\0')
 	{
 		printed = 0; /* Flag for if an argument has been printed */
 		switch (format[i])
