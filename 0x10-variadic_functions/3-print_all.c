@@ -10,42 +10,40 @@
 void print_all(const char * const format, ...)
 {
 	va_list args;
-	int i;
 	char *s;
+	int i = 0, printed;
+	int separator = 0;
 
 	va_start(args, format);
-	i = 0;
-
 	/* Loop through the format string and print the corresponding argument */
 	while (format != NULL && format[i] != '\0')
 	{
+		 printed = 0; /* Flag to indicate if an argument has been printed */
 		switch (format[i])
 		{
 			case 'c':
 				printf("%c", va_arg(args, int));
+				printed = 1;
 				break;
 			case 'i':
 				printf("%d", va_arg(args, int));
+				printed = 1;
 				break;
 			case 'f':
 				printf("%f", (float)va_arg(args, double));
+				printed = 1;
 				break;
 			case 's':
 				s = va_arg(args, char *);
-				if (s == NULL)
-					printf("(nil)");
-				else
-					printf("%s", s);
-
+				printf("%s", s == NULL ? "(nil)" : s);
+				printed = 1;
 				break;
 		}
-
+		/* Print the separator if necessary */
+		separator = (printed && format[i + 1] != '\0') ? 1 : 0;
+		printf("%s", separator ? va_arg(args, char *) : "");
 		i++;
-		/* Print the separator character if there are more arguments */
-		if (format[i] != '\0' && (format[i] == 'c' || format[i] == 'i' || format[i] == 'f' || format[i] == 's'))
-			printf(", ");
 	}
 	va_end(args);
-	/* Print a new line at the end */
 	printf("\n");
 }
