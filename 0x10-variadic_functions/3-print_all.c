@@ -14,8 +14,6 @@ void print_all(const char * const format, ...)
 	int separator = 0;
 
 	va_start(args, format);
-	if (format == NULL)
-		return;
 	/* Loop through format string and print corresponding argument */
 	while (format[i] != '\0')
 	{
