@@ -42,8 +42,7 @@ void print_all(const char * const format, ...)
 
 		i++;
 		/* Print the separator character if there are more arguments */
-		if (format[i] != '\0' && (format[i] == 'c' || format[i] == 'i'
-					|| format[i] == 'f' || format[i] == 's'))
+		if (format[i] != '\0' && (format[i] == 'c' || format[i] == 'i' || format[i] == 'f' || format[i] == 's'))
 			printf(", ");
 	}
 	va_end(args);
