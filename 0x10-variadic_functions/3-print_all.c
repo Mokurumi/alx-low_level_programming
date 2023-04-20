@@ -15,10 +15,10 @@ void print_all(const char * const format, ...)
 	int separator = 0;
 
 	va_start(args, format);
-	/* Loop through the format string and print the corresponding argument */
+	/* Loop through format string and print corresponding argument */
 	while (format != NULL && format[i] != '\0')
 	{
-		 printed = 0; /* Flag to indicate if an argument has been printed */
+		printed = 0; /* Flag for if an argument has been printed */
 		switch (format[i])
 		{
 			case 'c':
