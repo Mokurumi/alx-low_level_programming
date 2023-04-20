@@ -5,7 +5,6 @@
  *
  * @format: args format
  *
- * Return: nothing
  */
 void print_all(const char * const format, ...)
 {
@@ -15,8 +14,10 @@ void print_all(const char * const format, ...)
 	int separator = 0;
 
 	va_start(args, format);
+	if (format == NULL)
+		return;
 	/* Loop through format string and print corresponding argument */
-	while (format != NULL && format[i] != '\0')
+	while (format[i] != '\0')
 	{
 		printed = 0; /* Flag for if an argument has been printed */
 		switch (format[i])
