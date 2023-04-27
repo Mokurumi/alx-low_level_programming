@@ -22,7 +22,7 @@ list_t *add_node_end(list_t **head, const char *str)
 	if (n_node->str == NULL)
 	{
 		free(n_node);
-		return (NUL);
+		return (NULL);
 	}
 
 	n_node->len = strlen(str);
