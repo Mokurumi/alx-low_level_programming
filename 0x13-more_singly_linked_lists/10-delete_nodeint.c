@@ -4,8 +4,8 @@
  * delete_nodeint_at_index - delete a new node at a given position
  *
  * @head: pointer to the head node of the linked list.
- * @idx: index of position where the new node should be added, starting at 0.
- * @n: data (n) to be stored in the new node.
+ * @index: index of position where new node should be added,
+ * starting at 0.
  *
  * Return: 1 if it succeeded, -1 if it failed.
  */
