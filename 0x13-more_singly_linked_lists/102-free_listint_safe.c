@@ -9,21 +9,39 @@
  */
 size_t free_listint_safe(listint_t **h)
 {
+	listint_t *slow, *fast, *tmp;
 	size_t count = 0;
-	listint_t *tmp, *head = *h;
 
-	while (head != NULL)
+	if (h == NULL)
+		return (0);
+
+	slow = *h;
+	fast = *h;
+
+	while (slow && fast && fast->next)
 	{
-		if (head <= head->next)
+		slow = slow->next;
+		fast = fast->next->next;
+
+		if (slow == fast) /* loop detected */
 		{
-			*h = NULL;
-			free(head);
-			count++;
+			/* Break the loop */
+			fast = *h;
+			while (slow != fast)
+			{
+				tmp = slow;
+				slow = slow->next;
+				fast = fast->next;
+			}
+			tmp->next = NULL;
 			break;
 		}
+	}
 
-		tmp = head;
-		head = head->next;
+	while (*h != NULL)
+	{
+		tmp = *h;
+		*h = (*h)->next;
 		free(tmp);
 		count++;
 	}
