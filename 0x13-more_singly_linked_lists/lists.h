@@ -9,8 +9,7 @@
 /**
  * struct list_s - singly linked list
  *
- * @str: malloc'ed string
- * @len: length of the string
+ * @n: malloc'ed string
  * @next: points to the next node
  *
  */
