@@ -7,7 +7,7 @@
 #include <stdlib.h>
 
 /**
- * struct list_s - singly linked list
+ * struct listint_s - singly linked list
  *
  * @n: malloc'ed string
  * @next: points to the next node
