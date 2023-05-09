@@ -14,11 +14,12 @@ void print_usage_and_exit(void)
  *
  * @message: The error message to print.
  * @filename: The name of the file associated with the error.
+ * @err: The error code
  */
-void print_error_and_exit(const char *message, const char *filename)
+void print_error_and_exit(const char *message, const char *filename, int err)
 {
 	dprintf(STDERR_FILENO, "Error: %s %s\n", message, filename);
-	exit(errno);
+	exit(err);
 }
 
 /**
@@ -34,35 +35,38 @@ void copy_file(const char *file_from, const char *file_to)
 
 	fd_from = open(file_from, O_RDONLY);
 	if (fd_from == -1)
-		print_error_and_exit("Can't read from file ", file_from);
+		print_error_and_exit("Can't read from file ", file_from, 98);
 
 	fd_to = open(file_to, O_WRONLY | O_CREAT | O_TRUNC, 0644);
 	if (fd_to == -1)
-		print_error_and_exit("Can't write to ", file_to);
+		print_error_and_exit("Can't write to ", file_to, 99);
 
 	while ((read_chars = read(fd_from, buf, 1024)) > 0)
 	{
 		write_chars = write(fd_to, buf, read_chars);
 		if (write_chars != read_chars)
-			print_error_and_exit("Can't write to ", file_to);
+			print_error_and_exit("Can't write to ", file_to, 99);
 	}
 
 	if (read_chars == -1)
-		print_error_and_exit("Can't read from file ", file_from);
+		print_error_and_exit("Can't read from file ", file_from, 98);
 
 	if (close(fd_from) == -1)
-		print_error_and_exit("Can't close fd ", file_from);
+		print_error_and_exit("Can't close fd ", file_from, 100);
 
 	if (close(fd_to) == -1)
-		print_error_and_exit("Can't close fd ", file_to);
+		print_error_and_exit("Can't close fd ", file_to, 100);
 }
 
 /**
  * main - check the code
  *
+ * @argc: args length
+ * @argv: args array
+ *
  * Return: Always 0.
  */
-int main(int argc, char* argv[])
+int main(int argc, char *argv[])
 {
 	if (argc != 3)
 		print_usage_and_exit();
