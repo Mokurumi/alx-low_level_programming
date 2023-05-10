@@ -37,6 +37,9 @@ void copy_file(const char *file_from, const char *file_to)
 	if (fd_from == -1)
 		print_error_and_exit("Can't read from file ", file_from, 98);
 
+	if (access(file_to, F_OK) == 0 && access(file_to, W_OK) != 0)
+		print_error_and_exit("Can't write to ", file_to, 99);
+
 	fd_to = open(file_to, O_WRONLY | O_CREAT | O_TRUNC, 0644);
 	if (fd_to == -1)
 		print_error_and_exit("Can't write to ", file_to, 99);
@@ -70,6 +73,9 @@ int main(int argc, char *argv[])
 {
 	if (argc != 3)
 		print_usage_and_exit();
+
+	if (access(argv[1], F_OK | R_OK) == -1)
+		print_error_and_exit("Can't read from file ", argv[1], 98);
 
 	copy_file(argv[1], argv[2]);
 
