@@ -41,12 +41,10 @@ void print_all(const char * const format, ...)
 				i++;
 				continue;
 		}
-
 		separator = (printed && format[i + 1] != '\0') ? 1 : 0;
 		printf("%s", separator ? ", " : "");
 		i++;
 	}
-
 	va_end(args);
 	printf("\n");
 }
