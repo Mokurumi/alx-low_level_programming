@@ -38,13 +38,5 @@ size_t free_listint_safe(listint_t **h)
 		}
 	}
 
-	while (*h != NULL)
-	{
-		tmp = *h;
-		*h = (*h)->next;
-		free(tmp);
-		count++;
-	}
-
 	return (count);
 }
