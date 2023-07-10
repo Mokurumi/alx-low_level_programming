@@ -17,5 +17,7 @@ int append_text_to_file(const char *filename, char *text_content);
 /* elf functions */
 void print_error(const char* message);
 void display_elf_header(const Elf64_Ehdr* header);
+const char *get_data_encoding(unsigned char encoding);
+const char *get_osabi_name(unsigned char osabi);
 
 #endif
