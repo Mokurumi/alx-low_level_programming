@@ -55,7 +55,7 @@ int main(int argc, char *argv[])
 
 	/* Read the ELF header */
 	num_bytes = read(fd, &header, sizeof(header));
-	if (num_bytes == -1 || num_bytes < sizeof(header))
+	if (num_bytes == -1 || num_bytes < (ssize_t)sizeof(header))
 	{
 		print_error("Failed to read ELF header");
 	}
