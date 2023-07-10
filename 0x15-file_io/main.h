@@ -8,9 +8,14 @@
 #include<fcntl.h>
 #include<sys/stat.h>
 #include<sys/types.h>
+#include <elf.h>
 
 ssize_t read_textfile(const char *filename, size_t letters);
 int create_file(const char *filename, char *text_content);
 int append_text_to_file(const char *filename, char *text_content);
+
+/* elf functions */
+void print_error(const char* message);
+void display_elf_header(const Elf64_Ehdr* header);
 
 #endif
