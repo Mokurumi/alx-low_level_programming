@@ -15,9 +15,9 @@ int create_file(const char *filename, char *text_content);
 int append_text_to_file(const char *filename, char *text_content);
 
 /* elf functions */
-void print_error(const char* message);
-void display_elf_header(const Elf64_Ehdr* header);
-const char *get_data_encoding(unsigned char encoding);
-const char *get_osabi_name(unsigned char osabi);
+void display_magic_n_class(unsigned char *e_ident);
+void display_data_n_version(unsigned char *e_ident);
+void display_osabi(unsigned char *e_ident);
+void display_type_n_entry(unsigned int e_type, unsigned char *e_ident, unsigned long int e_entry);
 
 #endif
