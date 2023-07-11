@@ -58,6 +58,7 @@ int main(int argc, char *argv[])
 	char buffer[BUFFER_SIZE];
 	ssize_t bytes_read, bytes_written;
 	int input_fd, output_fd;
+	struct stat st;
 
 	if (argc != 3)
 		print_usage_error();
@@ -69,6 +70,9 @@ int main(int argc, char *argv[])
 	output_fd = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0644);
 	if (output_fd == -1)
 		print_write_error(argv[2]);
+	/* Retrieve source file permissions */
+	if (stat(argv[1], &st) == -1)
+		print_read_error(argv[1]);
 
 	while ((bytes_read = read(input_fd, buffer, BUFFER_SIZE)) > 0)
 	{
@@ -86,11 +90,9 @@ int main(int argc, char *argv[])
 	if (close(output_fd) == -1)
 		print_close_error(output_fd);
 
-	/* Set desired file permissions (rw-rw-r--) */
-	if (chmod(argv[2], S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH) == -1)
-	{
+	/* Set desired file permissions on the destination file */
+	if (chmod(argv[2], st.st_mode) == -1)
 		print_write_error(argv[2]);
-	}
 
 	return (0);
 }
