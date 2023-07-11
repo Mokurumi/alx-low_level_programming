@@ -86,5 +86,11 @@ int main(int argc, char *argv[])
 	if (close(output_fd) == -1)
 		print_close_error(output_fd);
 
+	/* Set desired file permissions (rw-rw-r--) */
+	if (chmod(argv[2], S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH) == -1)
+	{
+		print_write_error(argv[2]);
+	}
+
 	return (0);
 }
