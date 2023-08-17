@@ -41,14 +41,15 @@ int main(void)
 	printf("The largest palindrome made from the product of two 3-digit numbers is: %d\n", largest_palindrome);
 
 	fp = fopen("102-result", "w");
-	if (fp != NULL)
-	{
-		fprintf(fp, "%d\n", largest_palindrome);
+	if (fp != NULL) {
+		fprintf(fp, "%d", largest_palindrome); // Write the result without a newline
 		fclose(fp);
 		printf("Result saved in file '102-result'\n");
 	}
 	else
+	{
 		printf("Failed to save result to file\n");
+	}
 
 	return (0);
 }
