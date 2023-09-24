@@ -12,10 +12,11 @@
  * @value: The value associated with the key
  * @next: A pointer to the next node in the collision resolution chain
  */
-typedef struct hash_node_s {
-    char *key;
-    char *value;
-    struct hash_node_s *next;
+typedef struct hash_node_s
+{
+	char *key;
+	char *value;
+	struct hash_node_s *next;
 } hash_node_t;
 
 /**
@@ -25,9 +26,10 @@ typedef struct hash_node_s {
  * @array: An array of size @size, containing pointers to the head node
  *         of the collision resolution chains
  */
-typedef struct hash_table_s {
-    unsigned long int size;
-    hash_node_t **array;
+typedef struct hash_table_s
+{
+	unsigned long int size;
+	hash_node_t **array;
 } hash_table_t;
 
 /**
@@ -42,11 +44,11 @@ typedef struct hash_table_s {
  */
 typedef struct shash_node_s
 {
-     char *key;
-     char *value;
-     struct shash_node_s *next;
-     struct shash_node_s *sprev;
-     struct shash_node_s *snext;
+	char *key;
+	char *value;
+	struct shash_node_s *next;
+	struct shash_node_s *sprev;
+	struct shash_node_s *snext;
 } shash_node_t;
 
 /**
@@ -61,10 +63,10 @@ typedef struct shash_node_s
  */
 typedef struct shash_table_s
 {
-     unsigned long int size;
-     shash_node_t **array;
-     shash_node_t *shead;
-     shash_node_t *stail;
+	unsigned long int size;
+	shash_node_t **array;
+	shash_node_t *shead;
+	shash_node_t *stail;
 } shash_table_t;
 
 /* Function prototypes */
