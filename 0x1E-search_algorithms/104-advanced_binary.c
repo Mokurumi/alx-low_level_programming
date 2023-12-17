@@ -22,7 +22,7 @@ int advanced_binary(int *array, size_t size, int value)
 	for (i = 0; i < size; i++)
 		printf("%d%s", array[i], i == size - 1 ? "\n" : ", ");
 
-	if (array[mid] == value && (mid == 0 || array[mid - 1] < value))
+	if (array[mid] == value && (mid == 0 || array[mid - 1] != value))
 		return (mid);
 	else if (size == 1)
 		return (-1);
