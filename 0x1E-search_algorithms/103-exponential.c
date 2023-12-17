@@ -41,7 +41,7 @@ int exponential_search(int *array, size_t size, int value)
 			printf("%d%s", array[j], (j == end) ? "\n" : ", ");
 
 		if (array[mid] == value)
-			return mid;
+			return (mid);
 		else if (array[mid] < value)
 			start = mid + 1;
 		else
